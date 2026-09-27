@@ -12,11 +12,14 @@
   body{font-family:Manrope,system-ui,sans-serif;color:var(--ink)}
   .deck{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
   .slide{position:absolute;width:min(100vw,177.78vh);height:min(56.25vw,100vh);background:radial-gradient(70% 60% at 50% 0%,rgba(240,166,40,.10),transparent 70%),var(--bg);
-    padding:5.5% 6.5%;display:flex;flex-direction:column;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s;container-type:size}
+    padding:5.5% 6.5%;display:flex;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .35s;container-type:size}
   .slide.on{opacity:1;pointer-events:auto}
   .kick{font-family:'JetBrains Mono',monospace;font-size:1.5cqw;letter-spacing:.16em;color:var(--accent);text-transform:uppercase}
   h1,h2{font-family:Oswald,sans-serif;text-transform:uppercase;line-height:.98;text-wrap:balance}
   h1{font-size:7cqw}h2{font-size:4.6cqw;margin-top:1cqw}
+  /* Заголовок завжди на тій самій висоті; решту слайда центруємо в залишку. */
+  .slide > h2 + *{margin-top:auto}
+  .slide > h2 ~ :last-child{margin-bottom:auto}
   .ac{color:var(--accent)}
   p,li{font-size:2cqw;line-height:1.45;color:var(--ink2)}
   .grid{display:grid;gap:2cqw;margin-top:3cqw}
