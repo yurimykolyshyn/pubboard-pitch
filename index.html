@@ -37,7 +37,7 @@
 <div class="deck">
 
 <!-- 1. Титульний -->
-<section class="slide">
+<section class="slide on">
   <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:4cqw;align-items:center;height:100%">
     <div>
       <div class="brand"><div class="mark">PB</div><div class="wm">PubBoard</div></div>
@@ -159,7 +159,7 @@
   const slides=[...document.querySelectorAll('.slide')],nav=document.getElementById('nav');
   slides.forEach((s,i)=>{const n=document.createElement('div');n.className='n';n.textContent=(i+1)+' / '+slides.length;s.appendChild(n);nav.appendChild(document.createElement('i'))});
   let cur=Math.min(slides.length-1,Math.max(0,(parseInt(location.hash.slice(1))||1)-1));
-  function show(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('on',k===cur));[...nav.children].forEach((d,k)=>d.classList.toggle('on',k===cur));history.replaceState(null,'','#'+(cur+1))}
+  function show(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('on',k===cur));[...nav.children].forEach((d,k)=>d.classList.toggle('on',k===cur));try{history.replaceState(null,'','#'+(cur+1))}catch(e){}}
   addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key))show(cur+1);if(['ArrowLeft','PageUp','Backspace'].includes(e.key))show(cur-1);if(e.key==='f')document.documentElement.requestFullscreen?.()});
   addEventListener('click',e=>show(cur+(e.clientX>innerWidth/2?1:-1)));
   show(cur);
