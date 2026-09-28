@@ -19,6 +19,7 @@
   h1,h2{font-family:Oswald,sans-serif;text-transform:uppercase;line-height:.98;text-wrap:balance}
   h1{font-size:7cqw}h2{font-size:4.6cqw;margin-top:1cqw}
   /* Заголовок завжди на тій самій висоті; решту слайда центруємо в залишку. */
+  .slide > h2{margin-bottom:2.5cqw}
   .slide > h2 + *{margin-top:auto}
   .slide > h2 ~ :last-child{margin-bottom:auto}
   .ac{color:var(--accent)}
@@ -27,6 +28,7 @@
   .card{background:var(--panel);border:1px solid var(--line);border-radius:1.4cqw;padding:2cqw 2.2cqw}
   .card h3{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:2.3cqw;margin-bottom:.6cqw}
   .card p{font-size:1.6cqw}
+  .grid.dense{gap:1.4cqw}.grid.dense .card{padding:1.5cqw 2cqw}
   .mono{font-family:'JetBrains Mono',monospace}
   .n{font-family:'JetBrains Mono',monospace;font-size:1.3cqw;color:var(--muted);position:absolute;right:3cqw;bottom:2.5cqw}
   .brand{display:flex;align-items:center;gap:1.4cqw}
@@ -74,7 +76,7 @@
 <section class="slide">
   <div class="kick">Рішення</div>
   <h2>PubBoard: <span class="ac">телефон → TV</span></h2>
-  <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+  <div class="grid dense" style="grid-template-columns:repeat(3,1fr)">
     <div class="card"><h3>Будь-який Smart TV</h3><p>Браузер і 4-значний код. Без приставок і програм.</p></div>
     <div class="card"><h3>Живе меню</h3><p>Ціна, ABV, стиль, «останній кег», стоп-лист — оновлення за секунду.</p></div>
     <div class="card"><h3>Кілька екранів</h3><p>Бар, тераса, VIP — різні категорії й режими: меню, список, IPTV.</p></div>
