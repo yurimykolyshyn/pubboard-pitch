@@ -21,7 +21,7 @@
   /* Заголовок завжди на тій самій висоті; решту слайда центруємо в залишку. */
   .slide > h2{margin-bottom:2.5cqw}
   .slide > h2 + *{margin-top:auto}
-  .slide > h2 ~ :last-child{margin-bottom:auto}
+  .slide > h2 ~ :not(.n):has(+ .n), .slide > h2 ~ :not(.n):last-child{margin-bottom:auto}
   .ac{color:var(--accent)}
   p,li{font-size:2cqw;line-height:1.45;color:var(--ink2)}
   .grid{display:grid;gap:2cqw;margin-top:3cqw}
