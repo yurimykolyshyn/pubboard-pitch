@@ -36,7 +36,7 @@
   .wm{font-family:Oswald,sans-serif;font-weight:700;font-size:3.4cqw;text-transform:uppercase}
   code{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:.95em}
   .nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:5}
-  .nav i{width:8px;height:8px;border-radius:50%;background:rgba(246,241,231,.25)}.nav i.on{background:var(--accent)}
+  .nav i{width:8px;height:8px;border-radius:50%;background:rgba(246,241,231,.25)}.nav i.on{background:var(--accent)}.nav i.bk{display:none}
 </style>
 </head>
 <body>
@@ -167,11 +167,49 @@
   </div>
 </section>
 
+<!-- 8. Запасний: повний стек (поза нумерацією, лише для Q&A) -->
+<section class="slide" data-backup>
+  <div class="kick">Запасний слайд · для запитань</div>
+  <h2>Стек <span class="ac">під капотом</span></h2>
+  <svg viewBox="0 0 1200 420" style="flex:1;width:100%;min-height:0" role="img" aria-label="Стек PubBoard: клієнти → Cloudflare (Pages, Worker, Durable Object, D1, R2, Cron) → Monobank, Brevo, Telegram, тривоги й YouTube">
+    <defs><marker id="m8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F0A628"/></marker><marker id="m8d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#948B7E"/></marker></defs>
+    <rect class="b" x="20" y="10" width="260" height="70" rx="14"/><text class="t" x="40" y="42">Лендінг</text><text class="s" x="40" y="65">HTML · beer-map</text>
+    <rect class="b" x="320" y="10" width="260" height="70" rx="14"/><text class="t" x="340" y="42">Адмінка</text><text class="s" x="340" y="65">Svelte 5 · TypeScript</text>
+    <rect class="b" x="620" y="10" width="260" height="70" rx="14"/><text class="t" x="640" y="42">Telegram-бот</text><text class="s" x="640" y="65">/oos · /broadcast</text>
+    <rect class="b" x="920" y="10" width="260" height="70" rx="14"/><text class="t" x="940" y="42">TV-екран</text><text class="s" x="940" y="65">Svelte · офлайн-кеш</text>
+    <rect x="10" y="110" width="1180" height="200" rx="16" fill="none" stroke="rgba(246,241,231,.25)" stroke-width="1.5" stroke-dasharray="8 6"/><text class="l" x="1176" y="302" text-anchor="end">CLOUDFLARE</text>
+    <rect class="b" x="20" y="125" width="260" height="70" rx="14"/><text class="t" x="40" y="157">Pages</text><text class="s" x="40" y="180">сайт і адмінка</text>
+    <rect class="h" x="360" y="125" width="400" height="70" rx="14"/><text class="t" x="380" y="157">Worker</text><text class="s" x="380" y="180">API · 14 модулів · ESM</text>
+    <rect class="h" x="880" y="125" width="300" height="70" rx="14"/><text class="t" x="900" y="157">Durable Object</text><text class="s" x="900" y="180">ScreenHub · WebSocket</text>
+    <rect class="b" x="300" y="220" width="240" height="65" rx="14"/><text class="t" x="320" y="252">D1 · SQLite</text><text class="s" x="320" y="275">меню · тарифи</text>
+    <rect class="b" x="580" y="220" width="240" height="65" rx="14"/><text class="t" x="600" y="252">R2</text><text class="s" x="600" y="275">фото · медіа</text>
+    <rect class="b" x="880" y="220" width="300" height="65" rx="14"/><text class="t" x="900" y="252">Cron</text><text class="s" x="900" y="275">білінг · тривоги</text>
+    <rect class="b" x="20" y="340" width="260" height="70" rx="14"/><text class="t" x="40" y="372">Monobank</text><text class="s" x="40" y="395">оплата · автосписання</text>
+    <rect class="b" x="320" y="340" width="260" height="70" rx="14"/><text class="t" x="340" y="372">Brevo</text><text class="s" x="340" y="395">листи для входу</text>
+    <rect class="b" x="620" y="340" width="260" height="70" rx="14"/><text class="t" x="640" y="372">Telegram API</text><text class="s" x="640" y="395">бот · сповіщення</text>
+    <rect class="b" x="920" y="340" width="260" height="70" rx="14"/><text class="t" x="940" y="372">Тривоги · YouTube</text><text class="s" x="940" y="395">дані для TV</text>
+    <path class="a" d="M150 80 L150 121" marker-end="url(#m8)"/>
+    <path class="a" d="M450 80 L500 121" marker-end="url(#m8)"/>
+    <path class="a" d="M750 80 L700 121" marker-end="url(#m8)"/>
+    <path class="a" d="M1050 84 L1050 121" marker-start="url(#m8)" marker-end="url(#m8)"/>
+    <path class="a" d="M760 160 L876 160" marker-end="url(#m8)"/>
+    <path class="a" d="M500 195 L440 217" marker-end="url(#m8)"/>
+    <path class="a" d="M640 195 L680 217" marker-end="url(#m8)"/>
+    <path class="a" d="M880 235 L765 192" marker-end="url(#m8)"/>
+    <path class="d" d="M150 312 L150 336" marker-end="url(#m8d)"/>
+    <path class="d" d="M450 312 L450 336" marker-end="url(#m8d)"/>
+    <path class="d" d="M750 312 L750 336" marker-end="url(#m8d)"/>
+    <path class="d" d="M1050 312 L1050 336" marker-end="url(#m8d)"/>
+  </svg>
+</section>
+
+
 </div>
 <div class="nav" id="nav"></div>
 <script>
   const slides=[...document.querySelectorAll('.slide')],nav=document.getElementById('nav');
-  slides.forEach((s,i)=>{const n=document.createElement('div');n.className='n';n.textContent=(i+1)+' / '+slides.length;s.appendChild(n);nav.appendChild(document.createElement('i'))});
+  const main=slides.filter(s=>!s.hasAttribute('data-backup')).length;
+  slides.forEach((s,i)=>{const n=document.createElement('div');n.className='n';n.textContent=s.hasAttribute('data-backup')?'запас':(i+1)+' / '+main;s.appendChild(n);const d=document.createElement('i');if(s.hasAttribute('data-backup'))d.className='bk';nav.appendChild(d)});
   let cur=Math.min(slides.length-1,Math.max(0,(parseInt(location.hash.slice(1))||1)-1));
   function show(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('on',k===cur));[...nav.children].forEach((d,k)=>d.classList.toggle('on',k===cur));try{history.replaceState(null,'','#'+(cur+1))}catch(e){}}
   addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key))show(cur+1);if(['ArrowLeft','PageUp','Backspace'].includes(e.key))show(cur-1);if(e.key==='f')document.documentElement.requestFullscreen?.()});
